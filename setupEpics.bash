@@ -7,6 +7,17 @@
 #
 
 #
+# Unset some of the old unused variables to avoid environment mixing
+#
+unset PACKAGE_TOP
+unset PACKAGE_SITE_TOP
+unset TOOLS
+unset CONFIG_SITE_TOP
+unset TOOLS_SITE_TOP
+unset SETUP_SITE_TOP
+unset TOOLS_DATA
+
+#
 # New variables: EPICS_PACKAGE_TOP, EPICS_TOOLS, EPICS_TOOLS_DATA
 #
 export FACILITY_ROOT=/sdf/sw
