@@ -19,6 +19,7 @@ unset TOOLS_DATA
 
 #
 # New variables: EPICS_PACKAGE_TOP, EPICS_TOOLS, EPICS_TOOLS_DATA
+# Retained for backwards compatibility: PACKAGE_SITE_TOP
 #
 export FACILITY_ROOT=/sdf/sw
     export COMMON=$FACILITY_ROOT
@@ -27,6 +28,7 @@ export FACILITY_ROOT=/sdf/sw
         export EPICS_SITE_TOP=$EPICS_TOP
         export EPICS_PACKAGE_TOP=$EPICS_TOP/package
             export RTEMS=$EPICS_PACKAGE_TOP/rtems
+        export PACKAGE_SITE_TOP=$EPICS_PACKAGE_TOP
 export FACILITY_GROUP=/sdf/group/cds
     export TFTPBOOT=$FACILITY_GROUP/dev/tftpboot
     export GIT_SITE_TOP=$FACILITY_GROUP/git/repos
@@ -101,6 +103,11 @@ export TESTFAC_ARCHIVER_URL=http://testfac-archappp:17665/mgmt/ui/index.html
 alias FacetArchiver="firefox --no-remote $FACET_ARCHIVER_URL 2>1 > /dev/null&"
 alias LCLSArchiver="firefox --no-remote $LCLS_ARCHIVER_URL 2>1 > /dev/null&"
 alias TestFacArchiver="firefox --no-remote $TESTFAC_ARCHIVER_URL 2>1 > /dev/null&"
+
+#
+# Additional support variables
+#
+export MATLAB_PACKAGE_TOP=${EPICS_PACKAGE_TOP}/matlab
 
 #
 # Add 'newlist' command to manage lists like PATH, EPICS_CA_ADDR_LIST, etc.
