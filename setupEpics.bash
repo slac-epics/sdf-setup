@@ -19,7 +19,7 @@ unset TOOLS_DATA
 
 #
 # New variables: EPICS_PACKAGE_TOP, EPICS_TOOLS, EPICS_TOOLS_DATA
-# Retained for backwards compatibility: PACKAGE_SITE_TOP
+# Retained for backwards compatibility: PACKAGE_SITE_TOP, PACKAGE_TOP
 #
 export FACILITY_ROOT=/sdf/sw
     export COMMON=$FACILITY_ROOT
@@ -29,6 +29,7 @@ export FACILITY_ROOT=/sdf/sw
         export EPICS_PACKAGE_TOP=$EPICS_TOP/package
             export RTEMS=$EPICS_PACKAGE_TOP/rtems
         export PACKAGE_SITE_TOP=$EPICS_PACKAGE_TOP
+        export PACKAGE_TOP=$EPICS_PACKAGE_TOP
 export FACILITY_GROUP=/sdf/group/cds
     export TFTPBOOT=$FACILITY_GROUP/dev/tftpboot
     export GIT_SITE_TOP=$FACILITY_GROUP/git/repos
