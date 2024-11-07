@@ -33,6 +33,7 @@ export FACILITY_ROOT=/sdf/sw
 export FACILITY_GROUP=/sdf/group/cds
     export TFTPBOOT=$FACILITY_GROUP/dev/tftpboot
     export GIT_SITE_TOP=$FACILITY_GROUP/git/repos
+    export CONFIG_SITE_TOP=$FACILITY_GROUP/sw/epics/config
     export EPICS_APPS=$FACILITY_GROUP/sw/epics
         export EPICS_IOCS=$EPICS_APPS/iocCommon
 	export EPICS_IOC_SCREEN=$EPICS_IOCS
@@ -62,7 +63,7 @@ export BASE_MODULE_VERSION=7.0.3.1-1.0
         export EPICS_MODULES=${EPICS_TOP}/modules/${BASE_MODULE_VERSION}
                 export EPICS_MODULES_TOP=${EPICS_MODULES}
                         export EPICS_MBA_TEMPLATE_TOP=$EPICS_MODULES_TOP/icdTemplates/icdTemplates-R1-2-2
-export EPICS_EXTENSIONS=${EPICS_TOP}/extensions/R1.3.3
+export EPICS_EXTENSIONS=${EPICS_TOP}/extensions/R1.4.0
 
 #
 # The "facility" is not represented in the filesystem.
