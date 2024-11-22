@@ -52,7 +52,11 @@ export FACILITY_DATA=/sdf/data
 #
 # EPICS Version Specific
 #
-export BASE_MODULE_VERSION=7.0.3.1-1.0
+if [[ "$(basename "${BASH_SOURCE[0]}")" == *"7.0.8.1"* ]]; then
+    export BASE_MODULE_VERSION=7.0.8.1-1.0
+else
+    export BASE_MODULE_VERSION=7.0.3.1-1.0
+fi
         export EPICS_BASE_VER=${BASE_MODULE_VERSION}
         export EPICS_MODULES_VER=${BASE_MODULE_VERSION}
         export EPICS_BASE=${EPICS_TOP}/base/${BASE_MODULE_VERSION}
