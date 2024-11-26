@@ -1,6 +1,3 @@
-#/sdf/group/cds/sw/epics/tools/script is Unavailable.
-#/sdf/group/cds/sw/epics/tools/edm/script is Unavailable.
-#/sdf/group/cds/sw/epics/tools/AlarmConfigsTop/SCRIPT is Unavailable.
 #
 # For S3DF Testing of Development Network only.
 # No other "facilities" or variations are supported yet.
@@ -151,10 +148,10 @@ addpva 255.255.255.255
 # Executables
 #
 inspath $EPICS_TOOLS/bin
-inspath $EPICS_TOOLS/script
+inspath -q $EPICS_TOOLS/script
 inspath ${EPICS_BASE}/bin/${EPICS_HOST_ARCH}
-addpath $EPICS_TOOLS/edm/script
-addpath $ALHTOP/SCRIPT
+addpath -q $EPICS_TOOLS/edm/script
+addpath -q $ALHTOP/SCRIPT
 addpath -q /usr/X11R6/bin
 addpath ${EPICS_EXTENSIONS}/bin/${EPICS_HOST_ARCH}
 #addpath -q ${PVACCESSCPP}/bin/${EPICS_HOST_ARCH}
