@@ -51,6 +51,8 @@ export FACILITY_DATA=/sdf/data
 #
 if [[ "$(basename "${BASH_SOURCE[0]}")" == *"7.0.8.1"* ]]; then
     export BASE_MODULE_VERSION=7.0.8.1-1.0
+elif [[ "$(basename "${BASH_SOURCE[0]}")" == *"7.0-devel"* ]]; then
+    export BASE_MODULE_VERSION=7.0-devel
 else
     export BASE_MODULE_VERSION=7.0.3.1-1.0
 fi
@@ -115,7 +117,7 @@ export MATLAB_PACKAGE_TOP=${EPICS_PACKAGE_TOP}/matlab
 #
 # Add 'newlist' command to manage lists like PATH, EPICS_CA_ADDR_LIST, etc.
 #
-if [ ! $(declare -f -F newlist) ];
+if [[ ! $(declare -f -F newlist) ]];
 then
         if [ -r $EPICS_SETUP/newlist.sh ];
         then
