@@ -66,7 +66,7 @@ fi
         export EPICS_MODULES=${EPICS_TOP}/modules/${BASE_MODULE_VERSION}
                 export EPICS_MODULES_TOP=${EPICS_MODULES}
                         export EPICS_MBA_TEMPLATE_TOP=$EPICS_MODULES_TOP/icdTemplates/icdTemplates-R1-2-2
-export EPICS_EXTENSIONS=${EPICS_TOP}/extensions/R1.4.0
+export EPICS_EXTENSIONS=${EPICS_TOP}/extensions/R1.4.1
 
 #
 # The "facility" is not represented in the filesystem.
